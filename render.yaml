@@ -1,0 +1,7 @@
+services:
+  - type: static_site
+    name: vite-react-typescript-app
+    env: static
+    buildCommand: npm run build
+    publishDirectory: dist
+    autoDeploy: true
