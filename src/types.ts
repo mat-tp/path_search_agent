@@ -21,11 +21,14 @@ export enum NodeState {
 
 export type Grid = number[][];
 
+
 export type PathFinder = (
   grid: Grid,
   start: [number, number],
   target: [number, number]
 ) => Promise<Node[]>;
+
+
 
 export interface SearchStats {
   nodesVisited: number;
@@ -34,4 +37,5 @@ export interface SearchStats {
   executionTime: number;
   maxDepth: number;
   frontierSize: number;
+  steps: number;
 }
