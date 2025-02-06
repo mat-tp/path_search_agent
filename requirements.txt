@@ -80,7 +80,6 @@ openai==1.58.1
 opt_einsum==3.4.0
 optree==0.14.0
 ordered-set==4.1.0
-packaging==24.1
 pandas==2.2.3
 parso==0.8.4
 passlib==1.7.4
