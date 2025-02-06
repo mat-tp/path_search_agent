@@ -1,0 +1,29 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name if different
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Adjust to your required Python version
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-dev
+          pip install -r requirements.txt  # Install all required packages
+
+      - name: Build and Deploy
+        run: |
+          # Add build commands for your project
+          echo "Deployment script goes here"
